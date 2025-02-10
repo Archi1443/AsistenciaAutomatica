@@ -3,7 +3,6 @@ import time
 import schedule 
 from webdriver_manager.chrome import ChromeDriverManager
 
-
 driver = webdriver.Chrome(ChromeDriverManager().install())
 MOODLE_URL = "https://cursos2.e-itesca.edu.mx/2025-I/login/index.php"
 USERNAME = "21130376"
