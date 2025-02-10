@@ -2,6 +2,8 @@ from selenium import webdriver
 import time
 import schedule 
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
 
 driver = webdriver.Chrome(ChromeDriverManager().install())
 MOODLE_URL = "https://cursos2.e-itesca.edu.mx/2025-I/login/index.php"
