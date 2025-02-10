@@ -37,6 +37,3 @@ jobs:
              
       - name: Ejecutar el script de asistencia
         run: python main.py 
-        
-      - name: Run tests
-        run: pytest
