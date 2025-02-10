@@ -10,6 +10,13 @@ jobs:
     steps:
       - name: Clonar repositorio
         uses: actions/checkout@v3
+        
+      - name: Instalar Chrome
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget unzip
+          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+          sudo apt-get install -y ./google-chrome-stable_current_amd64.deb
 
       - name: Instalar dependencias
         run: pip install selenium webdriver-manager schedule
