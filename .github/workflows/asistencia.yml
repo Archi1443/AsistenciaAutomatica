@@ -30,9 +30,10 @@ jobs:
           sudo apt-get install -y ./google-chrome-stable_current_amd64.deb
 
       - name: Instalar dependencias
-        run: pip install selenium webdriver-manager schedule
-             python -m pip install --upgrade pip
-             pip install selenium pytest webdriver-manager
+        run: |
+          python -m pip install --upgrade pip
+          pip install selenium webdriver-manager schedule
+          pip install selenium pytest webdriver-manager
              
       - name: Ejecutar el script de asistencia
         run: python main.py 
