@@ -1,11 +1,13 @@
-from selenium import webdriver
 import time
 import schedule 
-from webdriver_manager.chrome import ChromeDriverManager
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManage
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 
-driver = webdriver.Chrome(ChromeDriverManager().install())
+service = Service(ChromeDriverManager().install())
+driver = webdriver.Chrome(service=service)
 MOODLE_URL = "https://cursos2.e-itesca.edu.mx/2025-I/login/index.php"
 USERNAME = "21130376"
 PASSWORD = "37CSF"
